@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        @keyframes updownEffect1 {
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+
+            100% {
+                transform: translate3d(-2px, 8px, 0);
+            }
+        }
+
+        @keyframes updownEffect2 {
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+
+            100% {
+                transform: translate3d(3px, 6px, 0);
+            }
+        }
+
+        @keyframes updownEffect3 {
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+
+            100% {
+                transform: translate3d(1px, 10px, 0);
+            }
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background-image: url(/img/bg_ingredient.png);
+            background-position: center;
+            background-color: #F1F4F6;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+        }
+
+        .content {
+            width: 1920px;
+            height: 956px;
+            background-image: url(/img/bg.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bubbles {
+            border-radius: 50%;
+            border: 1px solid #FFFFFF;
+            box-shadow: 8px 8px 20px 0px #3763AA33, -20px 20px 70px 0px #1869ED1A inset;
+            /*background: radial-gradient(#1869ED1A, #1869ED00), linear-gradient(#F3F5F8, #FFFFFF);*/
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+            position: relative;
+            z-index: 1;
+            cursor: pointer;
+            transition: all 0.8s;
+        }
+
+        .bubbles:hover {
+            /*background: radial-gradient(#1869ED1A, #1869ED00), linear-gradient(#C1DAFF, #F3F8FF);*/
+            background: #C1DAFF;
+            transform: none;
+            box-shadow: 8px 8px 20px 0px #3763AA33, 38px -42px 110px 0px #FFFFFFCC inset;
+            color: #1869ED;
+
+        }
+
+        .bubble1 {
+            width: 200px;
+            height: 200px;
+            position: absolute !important;
+            animation: updownEffect1 3s infinite alternate;
+        }
+
+        .bubble_icons {
+            width: 40%;
+            height: 40%;
+            margin-bottom: 10px;
+        }
+
+        .bubble_titles {
+            font-weight: 600;
+        }
+
+        .bubble_title1 {
+            font-size: 26px;
+        }
+
+        .bubble2 {
+            width: 160px;
+            height: 160px;
+            animation: updownEffect2 2.8s infinite alternate;
+        }
+
+        .bubble3 {
+            width: 150px;
+            height: 150px;
+            animation: updownEffect3 2.4s infinite alternate;
+        }
+
+        .bubble4 {
+            width: 140px;
+            height: 140px;
+            animation: updownEffect2 3s infinite alternate;
+        }
+
+        .bubble5 {
+            width: 130px;
+            height: 130px;
+            animation: updownEffect2 1.8s infinite alternate;
+        }
+
+        .bubble6 {
+            width: 120px;
+            height: 120px;
+            animation: updownEffect3 2.7s infinite alternate;
+        }
+
+        .bubble7 {
+            width: 100px;
+            height: 100px;
+            animation: updownEffect1 2s infinite alternate;
+        }
+
+        .bg_bubbles {
+            border-radius: 50%;
+            background-size: cover;
+            position: relative;
+        }
+
+        .bg_bubble1 {
+            background-image: url(/img/bgbb1.svg);
+            animation: updownEffect1 2s infinite alternate;
+        }
+
+        .bg_bubble2 {
+            background-image: url(/img/bgbb2.svg);
+            animation: updownEffect1 2s infinite alternate;
+        }
+
+        .bg_bubble3 {
+            background-image: url(/img/bgbb3.svg);
+            animation: updownEffect1 2s infinite alternate;
+        }
+
+        .bg_bubble4 {
+            background-image: url(/img/bgbb4.svg);
+            animation: updownEffect1 2s infinite alternate;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="bubbles bubble1">
+            <img class="bubble_icons" src="/img/丽塔LT.svg">
+            <span class="bubble_titles bubble_title1">丽塔LT</span>
+        </div>
+        <div class="bubbles bubble2" style="left: 553px;top: 61px;">
+            <img class="bubble_icons" src="/img/丽客OCP.svg">
+            <span class="bubble_titles bubble_title2">丽客OCP</span>
+        </div>
+        <div class="bubbles bubble5" style="left: 159px;top: -109px;">
+            <img class="bubble_icons" src="/img/工单LWO.svg">
+            <span class="bubble_titles bubble_title2">工单LWO</span>
+        </div>
+        <div class="bubbles bubble4" style="left: -2px;top: 313px;x;">
+            <img class="bubble_icons" src="/img/供应商SRM.svg">
+            <span class="bubble_titles bubble_title2">供应商SRM</span>
+        </div>
+        <div class="bubbles bubble7" style="left: 181px;top: -116px;">
+            <img class="bubble_icons" src="/img/丽贝FMS.svg">
+            <span class="bubble_titles bubble_title2">丽贝FMS</span>
+        </div>
+        <div class="bubbles bubble4" style="left: 317px;top: -35px;">
+            <img class="bubble_icons" src="/img/丽仓WMS.svg">
+            <span class="bubble_titles bubble_title2">丽仓WMS</span>
+        </div>
+        <div class="bubbles bubble2" style="left: -266px;top: 390px;">
+            <img class="bubble_icons" src="/img/丽数BI.svg">
+            <span class="bubble_titles bubble_title2">丽数BI</span>
+        </div>
+        <div class="bubbles bubble6" style="left: -32px;top: 460px;">
+            <img class="bubble_icons" src="/img/丽效HR.svg">
+            <span class="bubble_titles bubble_title2">丽效HR</span>
+        </div>
+        <div class="bubbles bubble5" style="left: 166px;top: 345px;">
+            <img class="bubble_icons" src="/img/丽运LTP.svg">
+            <span class="bubble_titles bubble_title2">丽运LTP</span>
+        </div>
+        <div class="bubbles bubble2" style="left: -173px;top: 58px;">
+            <img class="bubble_icons" src="/img/丽运TES.svg">
+            <span class="bubble_titles bubble_title2">丽运TES</span>
+        </div>
+        <div class="bubbles bubble4" style="left:-480px;top: 263px;">
+            <img class="bubble_icons" src="/img/丽运TOS.svg">
+            <span class="bubble_titles bubble_title2">丽运TOS</span>
+        </div>
+        <span class="bg_bubbles bg_bubble1" style="width: 40px;height: 40px;left: -1262px;top: -198px;"></span>
+        <span class="bg_bubbles bg_bubble1" style="width: 30px;height: 30px;top:140px;left: -328px;"></span>
+        <span class="bg_bubbles bg_bubble2" style="width: 20px;height: 20px;left: -469px;top: -141px;"></span>
+        <span class="bg_bubbles bg_bubble2" style="width: 50px;height: 50px;left: 811px;top: -137px;"></span>
+        <span class="bg_bubbles bg_bubble3" style="width: 40px;height: 40px;left: -716px;top: -407px;"></span>
+        <span class="bg_bubbles bg_bubble3" style="width: 30px;height: 30px;left: 425px;top: -63px;"></span>
+        <span class="bg_bubbles bg_bubble4" style="width: 20px;height: 20px;left: -440px;top: -280px;"></span>
+        <span class="bg_bubbles bg_bubble4" style="width: 14px;height: 14px;left: -34px;top: -521px;"></span>
+        <span class="bg_bubbles bg_bubble1" style="width: 40px;height: 40px;left: -880px;top: 7rem;"></span>
+        <span class="bg_bubbles bg_bubble4" style="width: 30px;height: 30px;left: 520px;top: 80px;"></span>
+    </div>
+</body>
+</body>
+
+</html>
